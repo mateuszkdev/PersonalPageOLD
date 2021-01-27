@@ -1,4 +1,4 @@
-import { endPointInterface } from '../types/endpointInterfase'
+import { endPointInterface } from '../types/endpointInterface'
 const { projects } = require('../../../settings/projects.json')
 
 export const _: endPointInterface = {

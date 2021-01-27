@@ -1,5 +1,5 @@
 import { Request, Response, NextFunction } from 'express'
-import { endPointInterface } from '../types/endpointInterfase'
+import { endPointInterface } from '../types/endpointInterface'
 import { Application } from 'express'
 import { readdirSync } from 'fs'
 
