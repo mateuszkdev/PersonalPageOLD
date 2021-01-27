@@ -1,0 +1,13 @@
+extends template.pug
+
+append title
+    | HomePage
+append headerTitle
+    | HomePage
+
+append content
+
+    for project of projects
+
+        | hm #{project.name}
+        br
