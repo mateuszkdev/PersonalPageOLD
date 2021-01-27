@@ -6,12 +6,9 @@ html(lang="pl")
         meta(charset="UTF-8")
         meta(name="viewport", content="width=device-width, initial-scale=1.0")
         block head
-        <title>
-            | Mateusz#4711
-            block title
-        </title>
+        title Mateusz#4711
 
-    body
+    body(class="preload")
 
         div#title
             block headerTitle
@@ -19,3 +16,5 @@ html(lang="pl")
         div#content
 
             block content
+
+    block js

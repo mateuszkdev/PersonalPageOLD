@@ -1,0 +1,41 @@
+$main-bg-color: #161e25;
+$main-font-color: #b7d0e8;
+$title-font-color: #8fc7fa;
+$titles-font-size: 50px;
+$descriptions-font-size: 35px;
+
+body {
+
+    #content {
+
+        #aboutme {
+            
+            #about {
+                padding-left: 100px;
+                padding-right: 100px;
+            }
+
+            #langs {
+                .lang {
+                    display: inline-block;
+                    a { 
+                        margin: 10px;
+                        color: $title-font-color;
+                        text-decoration: none;
+                        transition: color 1s;
+                        &:hover {
+                            color: #43739f;
+                            transition: color 1s;
+                        }
+                    }
+                }
+            }
+        }
+
+        #projects {
+
+        }
+
+    }
+
+}

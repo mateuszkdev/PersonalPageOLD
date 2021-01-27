@@ -1,12 +1,38 @@
-$main-bg-color: #222d38;
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap');
+
+$main-bg-color: #161e25;
 $main-font-color: #b7d0e8;
+$title-font-color: #8fc7fa;
+
+$lato-font: 'Lato', sans-serif;
+
+$titles-font-size: 50px;
+$descriptions-font-size: 35px;
+
+.preload * {
+    -webkit-transition: none !important;
+    -moz-transition: none !important;
+    -ms-transition: none !important;
+    -o-transition: none !important;
+    transition: none !important;
+}
 
 body {
 
     background-color: $main-bg-color;
+    text-align: center;
+    padding: 80px;
+    font-family: $lato-font;
 
     #title {
-        color:#77b3ed;
+        color: $title-font-color;
+        font-size: 60px;
+    }
+
+    #content {
+
+        color: $main-font-color;
+
     }
 
 }

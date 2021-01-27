@@ -1,17 +1,34 @@
 extends template.pug
 
 append head
+    link(rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.2.0/css/all.css")
+    link(rel="stylesheet" href="https://static.fontawesome.com/css/fontawesome-app.css")
     link(rel="stylesheet", href="/css/style.css")
+    link(rel="stylesheet", href="/css/home.css")
 
-
-append title
-    | HomePage
 append headerTitle
     | HomePage
 
 append content
 
-    for project of projects
+    div#aboutme
+        p.about #{language.home.about[1]} <br>
 
-        | hm #{project.name}
-        br
+        div#langs
+            for lang of language.home.languages
+                p.lang
+                    a(href=lang.url target="_blank") #{lang.name}
+ 
+        div#social
+            for item of socialmedia
+                i(class="fab fa-"+ item.name.toLowerCase())
+                p.media <a href="">  </a>
+
+    div#projects
+        for project of projects
+            div.project
+                | hm #{project.name}
+                br
+
+    append js
+        script(src="/js/preload.js")
