@@ -1,0 +1,31 @@
+extends template.pug
+
+append head
+    link(rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.2.0/css/all.css")
+    link(rel="stylesheet" href="https://static.fontawesome.com/css/fontawesome-app.css")
+    link(rel="stylesheet", href="/css/style.css")
+    link(rel="stylesheet", href="/css/projects.css")
+
+append headerTitle
+    | Projekty
+
+append content
+
+    <br>
+    div#projects
+        for pr of projects
+            div.project
+                if pr.archived
+                    p.archived Archived
+                p.name #{pr.name} <br> <br>
+                if pr.link
+                    i(class="fab fa-"+ pr.link.platform.toLowerCase())
+                    a(href=pr.link.link) #{pr.link.platform}
+                if pr.authors
+                    for member of pr.authors
+                        p.author #{member}
+                p.version #{pr.currentVersion}
+
+    append js
+        script(src="/js/preload.js")
+        script(src="/js/block.js")

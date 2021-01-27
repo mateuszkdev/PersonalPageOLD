@@ -51,9 +51,23 @@ body {
             }
         }
 
-        // #projects {
+        .hrLine {
+            width: 30%;
+            background-color: lightblue;
+        }
 
-        // }
+        #projects {
+            a {
+                font-size: 30px;
+                text-decoration: none;
+                color:  #3997ee;
+                transition: color 1s;
+                &:hover {
+                    color: #81b1df;
+                    transition: color 1s;
+                }
+            }
+        }
 
     }
 

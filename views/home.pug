@@ -31,13 +31,11 @@ append content
                 i(class="fab fa-"+ item.name.toLowerCase())
                 p.media
                     a(href=item.link) #{item.name}
-                    
 
-    //- div#projects
-    //-     for project of projects
-    //-         div.project
-    //-             | hm #{project.name}
-    //-             br
+        hr.hrLine
+        div#projects
+            a(href='/projects') Moje projekty                    
 
     append js
         script(src="/js/preload.js")
+        script(src="/js/block.js")

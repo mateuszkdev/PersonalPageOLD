@@ -1,0 +1,37 @@
+body {
+
+    #projects {
+
+        display: inline-flex;
+        margin: 20px;
+
+        .project {
+
+            padding: 10px;
+            text-align: center;
+            background-color: #20272e;
+            border-radius: 10mm;
+
+            .archived {
+                background-color: #2a3239;
+                color: #769dbf;
+                text-align: left;
+                padding: 5px;
+                border-radius: 20mm;
+                width: 70%;
+            }
+
+            .name {
+                color: #8fc7fa;
+                font-size: 20px;
+            }
+
+        }
+
+        .hrLine {
+            height: 50%;
+        }
+
+    }
+
+}
