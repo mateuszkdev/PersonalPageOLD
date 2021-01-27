@@ -18,17 +18,26 @@ append content
             for lang of language.home.languages
                 p.lang
                     a(href=lang.url target="_blank") #{lang.name}
- 
+            <br> <br>
+            | #{language.home.about[2]} <br>
+            for lang of language.home.mostlangs
+                p.lang
+                    a #{lang}
+
+        br
         div#social
+            | Znaleść można mnie tutaj: <br> 
             for item of socialmedia
                 i(class="fab fa-"+ item.name.toLowerCase())
-                p.media <a href="">  </a>
+                p.media
+                    a(href=item.link) #{item.name}
+                    
 
-    div#projects
-        for project of projects
-            div.project
-                | hm #{project.name}
-                br
+    //- div#projects
+    //-     for project of projects
+    //-         div.project
+    //-             | hm #{project.name}
+    //-             br
 
     append js
         script(src="/js/preload.js")

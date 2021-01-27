@@ -30,11 +30,30 @@ body {
                     }
                 }
             }
+
+            #social {
+                .media {
+                    display: inline-flex;
+                    a {
+                        color: $title-font-color;
+                        margin: 10px;
+                        text-decoration: none;
+                        transition: color 1s;
+                        transition: font-size 1s;
+                        &:hover {
+                            color: #43739f;
+                            transition: color 1s;
+                            transition: font-size 1s;
+                            font-size: 20px;
+                        }
+                    }
+                }
+            }
         }
 
-        #projects {
+        // #projects {
 
-        }
+        // }
 
     }
 

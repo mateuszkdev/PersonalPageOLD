@@ -24,6 +24,11 @@ body {
     padding: 80px;
     font-family: $lato-font;
 
+    display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+
     #title {
         color: $title-font-color;
         font-size: 60px;
