@@ -46,6 +46,7 @@ export default class EndpointsHandler {
             
             case 'POST':
                 this.app.post(url, (req: Request, res: Response, next: NextFunction) => execute(req, res, next))
+                break;
 
             default: throw new Error(`[EndpointsHandler]: Invalid endpoint method: ${method}: file: ${name}`)
         }

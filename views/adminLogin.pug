@@ -1,0 +1,20 @@
+extends template.pug
+
+append head
+    link(rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.2.0/css/all.css")
+    link(rel="stylesheet" href="https://static.fontawesome.com/css/fontawesome-app.css")
+    link(rel="stylesheet" href="/css/style.css")
+    link(rel="stylesheet" href="/css/login.css")
+
+append headerTitle
+    | Admin login
+
+append content
+
+    <br>
+    form(action="/adminlogin", method="post")
+        | Nazwa użytkownika <br>
+        input(type="text", name="name" class="item")
+        | Hasło <br>
+        input(type="password", name="pass" class="item")
+        input(type="submit", value="Logowanie" class="item")
