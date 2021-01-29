@@ -18,11 +18,6 @@ export class App {
 
     async start () {
 
-        // test
-        const test = new redirects({
-            name: '/test', redirect: 'https://google.pl'
-        }); await test.save()
-
         this.server = await server
         await new EndpointsHandler(this.server)
         await new RedirectsHandler(this.server)
