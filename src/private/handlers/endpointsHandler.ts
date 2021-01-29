@@ -3,6 +3,8 @@ import { endPointInterface } from '../types/endpointInterface'
 import { Application } from 'express'
 import { readdirSync } from 'fs'
 
+import app from '../../app'
+
 export default class EndpointsHandler {
 
     app: Application
@@ -48,6 +50,7 @@ export default class EndpointsHandler {
             default: throw new Error(`[EndpointsHandler]: Invalid endpoint method: ${method}: file: ${name}`)
         }
 
+        app.endpoints.push(url)
         console.log(`[Success]: Loaded endpoint "${url}" | method: "${method}" from [${name}]`)
 
     }
