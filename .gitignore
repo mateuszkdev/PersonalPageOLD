@@ -3,3 +3,4 @@ build
 package-lock.json
 settings
 public/css/*.css
+src/eval.ts

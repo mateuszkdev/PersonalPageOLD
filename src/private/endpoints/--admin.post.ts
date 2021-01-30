@@ -31,7 +31,8 @@ export const _: endPointInterface = {
 
         else {
 
-            req.session.user = userLogin
+            let newSession = req.session
+            newSession.user = userLogin
             res.redirect('/admin')
 
         }

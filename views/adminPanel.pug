@@ -1,0 +1,15 @@
+extends template.pug
+
+append head
+    link(rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.2.0/css/all.css")
+    link(rel="stylesheet" href="https://static.fontawesome.com/css/fontawesome-app.css")
+    link(rel="stylesheet" href="/css/style.css")
+    link(rel="stylesheet" href="/css/admin.css")
+
+append headerTitle
+    | Admin login
+
+append content
+
+    for endpoint of endpoints
+        | #{endpoint}

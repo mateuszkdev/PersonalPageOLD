@@ -3,6 +3,8 @@ import { Request, Response, Application } from 'express'
 import { redirects } from '../../database/handler'
 import { redirectsInterface } from '../types/redirects'
 
+const Redirects = require('../../../settings/redirects.json')
+
 export default class RedirectsHandler {
 
     server: Application
@@ -15,6 +17,10 @@ export default class RedirectsHandler {
     async run () {
 
         const endpoints: Array<redirectsInterface> | any = await redirects.find({})
+
+        Redirects.forEach((redirect: redirectsInterface) => {
+            endpoints.push(redirect)
+        })
 
         endpoints.forEach( async (endpoint: redirectsInterface) => {
 

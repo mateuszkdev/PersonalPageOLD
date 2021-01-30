@@ -18,8 +18,9 @@ export default class EndpointsHandler {
 
         readdirSync(`${__dirname}/../endpoints`)
             .filter((f: string) => f.endsWith('.js'))
+            .filter((f: string) => !f.startsWith('--'))
                 .forEach((endpointName: string) => {
-
+  
                     const endPoint: endPointInterface = require(`${__dirname}/../endpoints/${endpointName}`)._
 
                     if (!endPoint.method || !endPoint.url || !endPoint.execute) return
