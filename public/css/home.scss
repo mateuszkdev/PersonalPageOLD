@@ -4,9 +4,15 @@ $title-font-color: #8fc7fa;
 $titles-font-size: 50px;
 $descriptions-font-size: 35px;
 
+#title {
+    animation: animT 1.5s ease-in 0.5s forwards;
+}
+
 body {
 
     #content {
+
+        animation: animB 2s ease-in 0.5 forwards;
 
         #aboutme {
             
@@ -35,6 +41,7 @@ body {
                 .media {
                     display: inline-flex;
                     a {
+                        animation: animT 1.5s ease-in 1s forwards;
                         color: $title-font-color;
                         margin: 10px;
                         text-decoration: none;
@@ -69,6 +76,42 @@ body {
             }
         }
 
+    }
+
+}
+
+@keyframes animT {
+
+    0% {
+        text-shadow: 1px 1px 1px $main-bg-color;
+    }
+
+    33% {
+        text-shadow: 1px 1px 100px $main-font-color;
+    }
+
+    66% {
+        text-shadow: 1px 1px 50px $main-font-color;
+    }
+
+    100% {
+        text-shadow: 1px 1px 10px #b7d0e880;
+    }
+
+}
+
+@keyframes animB {
+
+    0% {
+        border: rgba(0, 102, 120, 0.005) dashed;
+    }
+
+    50% {
+        border: rgba(0, 102, 120, 0.203) dashed;
+    }
+
+    100% {
+        border: rgba(0, 102, 120, 0.078) dashed;
     }
 
 }

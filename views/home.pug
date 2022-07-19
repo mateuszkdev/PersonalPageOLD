@@ -7,7 +7,7 @@ append head
     link(rel="stylesheet", href="/css/home.css")
 
 append headerTitle
-    | HomePage
+    a HomePage
 
 append content
 
@@ -31,10 +31,6 @@ append content
                 i(class="fab fa-"+ item.name.toLowerCase())
                 p.media
                     a(href=item.link) #{item.name}
-
-        //- hr.hrLine
-        //- div#projects
-        //-     a(href='/projects') Moje projekty                    
 
     append js
         script(src="/js/preload.js")
