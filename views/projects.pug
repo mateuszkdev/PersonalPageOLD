@@ -7,24 +7,13 @@ append head
     link(rel="stylesheet", href="/css/projects.css")
 
 append headerTitle
-    | Projekty
+    a Projects
 
 append content
 
     <br>
     div#projects
-        for pr of projects
-            div.project
-                if pr.archived
-                    p.archived Archived
-                p.name #{pr.name} <br> <br>
-                if pr.link
-                    i(class="fab fa-"+ pr.link.platform.toLowerCase())
-                    a(href=pr.link.link) #{pr.link.platform}
-                if pr.authors
-                    for member of pr.authors
-                        p.author #{member}
-                p.version #{pr.currentVersion}
+
 
     append js
         script(src="/js/preload.js")

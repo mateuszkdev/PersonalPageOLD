@@ -1,4 +1,5 @@
 $main-bg-color: #161e25;
+$scrollbar-color: #273440;
 $main-font-color: #b7d0e8;
 $title-font-color: #8fc7fa;
 $titles-font-size: 50px;
@@ -6,6 +7,18 @@ $descriptions-font-size: 35px;
 
 #title {
     animation: animT 1.5s ease-in 0.5s forwards;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: $main-bg-color;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: $scrollbar-color;
 }
 
 body {
@@ -63,22 +76,92 @@ body {
             background-color: lightblue;
         }
 
-        #projects {
-            a {
-                font-size: 30px;
-                text-decoration: none;
-                color:  #3997ee;
-                transition: color 1s;
-                &:hover {
-                    color: #81b1df;
-                    transition: color 1s;
-                }
+    }
+
+    #projects {
+
+
+        .projectsTitle {
+
+            color: $title-font-color;
+            font-size: 40px;
+
+        }
+
+        .projects-container {
+
+            color: $main-font-color;
+            padding-left: 100px;
+            padding-right: 100px;
+
+            display: block;
+            width: 100%;
+            float: left;
+
+            .prjects-title-container {
+                height: 10%;
             }
+
+        }
+
+        .project {
+
+            background-color: $main-bg-color;
+            text-align: center;
+            display: block;
+            float: left;
+            @media (min-width: 856px) {
+                width: 50%;
+            }
+
+            .project-item {
+
+                $margin-lr: 100px;
+                $margin-tb: 20px;
+
+                position: relative;
+                background-color: #20272e;
+                border-radius: 10mm;
+                padding: 30px;
+                margin: 30px;
+                @media (min-width: 856px) {
+                    padding: 20px;
+                    margin: $margin-tb $margin-lr $margin-tb $margin-lr;
+                }
+
+                .link {
+
+                    color: $main-font-color;
+                    padding: 5px;
+
+                }
+
+            }
+
+            .archived {
+                background-color: #2a3239;
+                color: #769dbf;
+                text-align: left;
+                padding: 5px;
+                border-radius: 20mm;
+                width: 70%;
+            }
+
+            .name {
+                color: #8fc7fa;
+                font-size: 20px;
+            }
+
+        }
+
+        .hrLine {
+            height: 50%;
         }
 
     }
 
 }
+
 
 @keyframes animT {
 

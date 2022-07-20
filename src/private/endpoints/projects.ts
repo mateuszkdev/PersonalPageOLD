@@ -5,7 +5,7 @@ const lang = require('../../../settings/lang.json')
 export const _: endPointInterface = {
 
     method: 'GET',
-    url: ['/projects', '/projekty', '/github'],
+    url: ['/projects', '/projekty'],
 
     execute: async (req, res) => {
         

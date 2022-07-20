@@ -32,6 +32,28 @@ append content
                 p.media
                     a(href=item.link) #{item.name}
 
-    append js
-        script(src="/js/preload.js")
-        script(src="/js/block.js")
+append projects
+    div#projects
+
+        div.projects-container.prjects-title-container
+            p.projectsTitle My projects
+
+        div.projects-container
+            for pr of projects
+                div.project
+                    div.project-item
+                        if pr.archived
+                            a.archived Archived
+                        a.name #{pr.name} <br> <br>
+                        if pr.link
+                            i(class="fab fa-"+ pr.link.platform.toLowerCase())
+                            a.link(href=pr.link.link) #{pr.link.platform}
+                        if pr.authors
+                            p.author Devs: 
+                                for member of pr.authors
+                                    | #{member}     
+                        p.version v.#{pr.currentVersion}
+
+append js
+    script(src="/js/preload.js")
+    script(src="/js/block.js")
