@@ -2,7 +2,6 @@ import { Application } from 'express'
 import server from './server'
 import EndpointsHandler from './private/handlers/endpointsHandler'
 import RedirectsHandler from './private/handlers/redirectsHandler'
-import { connection } from './database/handler'
 
 export class App {
 
@@ -10,7 +9,6 @@ export class App {
     endpoints: string[]
 
     constructor () {
-        connection()
 
         this.endpoints = []
         this.start()

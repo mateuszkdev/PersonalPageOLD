@@ -91,9 +91,6 @@ body {
         .projects-container {
 
             color: $main-font-color;
-            padding-left: 100px;
-            padding-right: 100px;
-
             display: block;
             width: 100%;
             float: left;
@@ -119,15 +116,17 @@ body {
                 $margin-lr: 100px;
                 $margin-tb: 20px;
 
-                position: relative;
                 background-color: #20272e;
                 border-radius: 10mm;
-                padding: 30px;
-                margin: 30px;
-                @media (min-width: 856px) {
+                padding: 20px;
+                margin: 20px;
+                @media (min-width: 859px) {
                     padding: 20px;
                     margin: $margin-tb $margin-lr $margin-tb $margin-lr;
                 }
+                // @media (max-width: 858px) {
+                //     width: 100%;
+                // }
 
                 .link {
 
